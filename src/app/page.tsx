@@ -17,17 +17,17 @@ export default function Page() {
           <Hero />
         </section>
         
-        <section id="about" className="py-16 px-4">
+        <section id="about" className="py-12 sm:py-16 px-4">
           <About />
         </section>
         
-        <section id="skills" className="py-16 px-4 bg-gradient-to-br from-background to-secondary/20">
+        <section id="skills" className="py-12 sm:py-16 px-4 bg-gradient-to-br from-background to-secondary/20">
           <div className="max-w-6xl mx-auto">
             <Skills />
           </div>
         </section>
         
-        <section id="projects" className="py-16 px-4">
+        <section id="projects" className="py-12 sm:py-16 px-4">
           <div className="max-w-6xl mx-auto">
             <Projects />
           </div>

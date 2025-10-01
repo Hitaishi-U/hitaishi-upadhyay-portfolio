@@ -18,16 +18,16 @@ function ProjectCard({ title, description, technologies, date, index }: ProjectC
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       whileHover={{ y: -8, scale: 1.02 }}
-      className="group relative bg-card rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-border"
+      className="group relative bg-card rounded-lg p-5 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-border h-full"
     >
-      <div className="space-y-4">
+      <div className="space-y-3 sm:space-y-4">
         {/* Project Title */}
-        <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors duration-300">
+        <h3 className="text-lg sm:text-xl font-semibold text-foreground group-hover:text-primary transition-colors duration-300">
           {title}
         </h3>
         
         {/* Description */}
-        <p className="text-muted-foreground text-sm leading-relaxed">
+        <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">
           {description}
         </p>
         
@@ -50,7 +50,7 @@ function ProjectCard({ title, description, technologies, date, index }: ProjectC
         </div>
         
         {/* Date */}
-        <div className="flex items-center gap-2 text-xs text-muted-foreground">
+        <div className="flex items-center gap-2 text-xs text-muted-foreground pt-2">
           <Calendar className="h-3 w-3" />
           <span>{date}</span>
         </div>
@@ -89,15 +89,15 @@ export default function Projects({ className }: ProjectsProps) {
   ]
 
   return (
-    <section className={`py-16 ${className}`}>
-      <div className="space-y-12">
+    <section className={`py-12 sm:py-16 ${className}`}>
+      <div className="space-y-8 sm:space-y-12">
         {/* Section Header */}
-        <div className="text-center space-y-4">
+        <div className="text-center space-y-3 sm:space-y-4 px-4">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-3xl md:text-4xl font-bold text-foreground"
+            className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground"
           >
             Featured <span className="text-highlight">Projects</span>
           </motion.h2>
@@ -105,14 +105,14 @@ export default function Projects({ className }: ProjectsProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-muted-foreground text-lg max-w-2xl mx-auto"
+            className="text-muted-foreground text-sm sm:text-base md:text-lg max-w-2xl mx-auto"
           >
             Showcasing innovative solutions in machine learning, AI, and financial technology
           </motion.p>
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {projects.map((project, index) => (
             <ProjectCard
               key={project.title}
